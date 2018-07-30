@@ -3,6 +3,7 @@ require 'bundler/setup'
 Bundler.require
 
 require 'pry'
+require_realative "../lib/concerns/findable"
 require_relative "../lib/concerns/savable"
 require_relative "../lib/pokemon"
 require_relative "../lib/scraper"
