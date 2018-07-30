@@ -17,8 +17,8 @@ module Findable
     end
 
     def find(id, db)
-      data = db.execute("SELECT * FROM pokemon WHERE id = ?", [id])
-      # create_or_update_from_data({id: data[0], name: data[1], type: data[2]})
+      data = db.execute("SELECT * FROM pokemon WHERE id = ?", [id])[0]
+      create_or_update_from_data({id: data[0], name: data[1], type: data[2]})
     end
   end
 end
