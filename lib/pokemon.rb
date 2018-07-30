@@ -1,6 +1,5 @@
 class Pokemon
-  extend Savable::ClassMethods
-  include Savable::InstanceMethods
+  extend Savable::ClassMethods, Findable::ClassMethods
 
   @@all = []
 
