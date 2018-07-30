@@ -1,3 +1,4 @@
+require_relative './concerns/savable.rb'
 class Pokemon
   extend Savable::ClassMethods
   include Savable::InstanceMethods
