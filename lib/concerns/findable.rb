@@ -9,14 +9,16 @@ module Findable
         found = self.find_by_name(data[:name])
         item = found.nil? ? self.new : found
         data.each do |k,v|
-            item.send("#{k}=", v)
+            if item.send("#{{k}}") != v
+              item.send("#{k}=", v)
+            end
         end
         item
     end
 
     def find(id, db)
       data = db.execute("SELECT * FROM pokemon WHERE id = ?", [id])
-
+      create_or_update_from_data()
     end
   end
 end
