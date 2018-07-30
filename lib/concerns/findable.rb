@@ -9,7 +9,7 @@ module Findable
         found = self.find_by_name(data[:name])
         item = found.nil? ? self.new : found
         data.each do |k,v|
-            if item.send("#{{k}}") != v
+            if item.send("#{k}") != v
               item.send("#{k}=", v)
             end
         end
