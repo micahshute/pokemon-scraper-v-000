@@ -23,12 +23,14 @@ module Savable
          self.all.clear
      end
 
+     
+    def save
+        
+    end
+
  end
 
  module InstanceMethods
 
-     def save
-         self.class.all << self
-     end
  end
 end
