@@ -12,6 +12,6 @@ class Pokemon
     @name = name
     @type = type
     @db = db
-    @all << self
+    @@all << self
   end
 end
