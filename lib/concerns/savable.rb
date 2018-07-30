@@ -24,7 +24,7 @@ module Savable
      end
 
 
-    def save(id: , db: )
+    def save(name, type, db)
 
     end
 
