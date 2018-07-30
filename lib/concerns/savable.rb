@@ -32,4 +32,3 @@ module Savable
      end
  end
 end
-    
