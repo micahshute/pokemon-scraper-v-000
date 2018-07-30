@@ -25,7 +25,8 @@ module Savable
 
 
     def save(name, type, db)
-      db.execute("INSERT INTO pokemon (name, type) VALUES (?,?)", [name, type])
+      pokemon = self.create_or_update_from_data({name: name, type: type})
+      db.execute("INSERT INTO pokemon (name, type) VALUES (?,?)", [pokemon.name, pokemon.type])
     end
 
  end
