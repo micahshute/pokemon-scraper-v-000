@@ -13,5 +13,9 @@ module Findable
         end
         item
     end
+
+    def find(id, db)
+      db.execute("SELECT * FROM pokemon WHERE id = ?", [id])
+    end
   end
 end
