@@ -8,7 +8,7 @@ module Findable
         return if data[:name].nil?
         found = self.find_by_name(data[:name])
         binding.pry
-        item = found.nil? ? self.new : found
+        item = found.nil? ? self.new(data) : found
         data.each do |k,v|
             if item.send("#{k}") != v
               item.send("#{k}=", v)
