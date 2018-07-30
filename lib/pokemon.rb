@@ -1,5 +1,6 @@
 class Pokemon
-
+  extend Savable::ClassMethods
+  include Savable::InstanceMethods
   attr_reader :id, :name, :type, :db
   attr_accessor :hp
 
