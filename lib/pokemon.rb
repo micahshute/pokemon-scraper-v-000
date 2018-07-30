@@ -3,7 +3,7 @@ class Pokemon
   include Savable::InstanceMethods
 
   @@all = []
-  
+
   attr_reader :id, :name, :type, :db
   attr_accessor :hp
 
