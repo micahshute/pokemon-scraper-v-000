@@ -23,9 +23,9 @@ module Savable
          self.all.clear
      end
 
-     
-    def save
-        
+
+    def save(id: , db: )
+
     end
 
  end
