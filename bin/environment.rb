@@ -6,7 +6,6 @@ require 'pry'
 
 require_relative "../lib/pokemon"
 require_relative "../lib/scraper"
-require_relative "../lib/concerns/savable"
 require_relative "sql_runner"
 
 @db = SQLite3::Database.new('../pokemon.db')
